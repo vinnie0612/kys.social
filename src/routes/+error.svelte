@@ -3,12 +3,12 @@
 
   import ColorThemeToggle from '$lib/components/ColorThemeToggle.svelte';
 
-  import gun from '$lib/images/gun_lg.png';
+  import Gun from '$lib/components/Gun.svelte';
 </script>
 
 <main class="dark:bg-stone-900 dark:text-slate-400 bg-slate-400 text-stone-900 h-full">
   <div id="app" class="hidden items-center justify-center h-full flex-col">
-    <img src={gun} width="130" alt="" />
+    <Gun />w
     <div class="flex flex-col">
       <div class="flex flex-row justify-between">
         <p class="text-3xl ml-1">
