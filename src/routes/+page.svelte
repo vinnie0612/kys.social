@@ -1,39 +1,27 @@
 <script lang="ts">
-  const letters = 'abcdefghijklmnopqrstuvxyz.';
+  import { onMount } from 'svelte';
+  import ColorThemeToggle from '../lib/components/ColorThemeToggle.svelte';
+  import TitleAnimation from '../lib/components/TitleAnimation.svelte';
 
-  let interval: any = null;
-  let text: string = 'kys.social';
-  let oText: string = text;
+  import Icon from '@iconify/svelte';
 
-  function handleHover(): void {
-    let iteration = 0;
-
-    clearInterval(interval);
-
-    interval = setInterval(() => {
-      text = text
-        .split('')
-        .map((letter, index) => {
-          if (index < iteration) {
-            return oText[index];
-          }
-
-          return letters[Math.floor(Math.random() * text.length)];
-        })
-        .join('');
-
-      if (iteration >= oText.length) {
-        clearInterval(interval);
-      }
-
-      iteration += 1 / 3;
-    }, 10);
-  }
+  onMount(() => {
+    const app = document.getElementById('app');
+    app?.classList.remove('hidden');
+  });
 </script>
 
-<main class="bg-stone-900 text-white h-full">
-  <div class="flex items-center justify-center h-full flex-col">
-    <h1 class="text-6xl" on:mouseover={handleHover} on:focus>{text}</h1>
-    <h2 class="text-3xl">pull the trigger</h2>
+<main class="dark:bg-stone-900 dark:text-slate-400 bg-slate-400 text-stone-900 h-full">
+  <div id="app" class="hidden items-center justify-center h-full flex-col">
+    <TitleAnimation />
+    <div class="mt-1 flex flex-row lg:text-5xl text-4xl items-center">
+      <a href="/blogs">
+        <Icon icon="pixelarticons:archive" />
+      </a>
+      <a href="https://mail.kys.social">
+        <Icon icon="pixelarticons:at" />
+      </a>
+      <ColorThemeToggle />
+    </div>
   </div>
 </main>
