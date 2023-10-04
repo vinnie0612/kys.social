@@ -6,9 +6,9 @@
   import Gun from '$lib/components/Gun.svelte';
 </script>
 
-<main class="dark:bg-stone-900 dark:text-slate-400 bg-slate-400 text-stone-900 h-full">
-  <div id="app" class="hidden items-center justify-center h-full flex-col">
-    <Gun />w
+<div class="flex justify-center w-full items-center">
+  <div class="items-center justify-center">
+    <Gun classes="flex justify-center" />
     <div class="flex flex-col">
       <div class="flex flex-row justify-between">
         <p class="text-3xl ml-1">
@@ -25,4 +25,4 @@
   </div>
 
   <ColorThemeToggle display={false} />
-</main>
+</div>

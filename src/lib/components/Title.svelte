@@ -13,7 +13,7 @@
     interval = setInterval(() => {
       text = text
         .split('')
-        .map((letter, index) => {
+        .map((_, index) => {
           if (index < iteration) {
             return oText[index];
           }

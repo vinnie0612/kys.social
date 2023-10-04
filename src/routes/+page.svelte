@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import ColorThemeToggle from '$lib/components/ColorThemeToggle.svelte';
-  import TitleAnimation from '$lib/components/TitleAnimation.svelte';
+  import TitleAnimation from '$lib/components/Title.svelte';
 
   import Icon from '@iconify/svelte';
   import Gun from '$lib/components/Gun.svelte';
@@ -12,8 +12,8 @@
   });
 </script>
 
-<main class="dark:bg-stone-900 dark:text-slate-400 transition bg-slate-400 text-stone-900 h-full">
-  <div id="app" class="hidden items-center justify-center h-full flex-col">
+<div class="flex items-center justify-center h-full w-full">
+  <div class="flex flex-col items-center">
     <Gun />
     <TitleAnimation />
     <div class="mt-1 flex flex-row lg:text-5xl text-4xl items-center">
@@ -26,4 +26,4 @@
       <ColorThemeToggle />
     </div>
   </div>
-</main>
+</div>
