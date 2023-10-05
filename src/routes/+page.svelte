@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import ColorThemeToggle from '$lib/components/ColorThemeToggle.svelte';
   import TitleAnimation from '$lib/components/Title.svelte';
+  import UserButton from '$lib/components/UserButton.svelte';
 
   import Icon from '@iconify/svelte';
   import Gun from '$lib/components/Gun.svelte';
@@ -24,6 +25,7 @@
         <Icon icon="pixelarticons:at" />
       </a>
       <ColorThemeToggle />
+      <UserButton />
     </div>
   </div>
 </div>

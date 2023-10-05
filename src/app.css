@@ -7,9 +7,3 @@
 body {
   font-family: 'VT323', monospace;
 }
-
-img {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
