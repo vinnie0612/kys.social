@@ -8,10 +8,9 @@
     const app = document.getElementById('app');
     app?.classList.remove('hidden');
   });
-  
+
   let isDarkMode = false;
   darkMode.subscribe((value) => {
-    console.log(value);
     isDarkMode = value;
   });
 </script>

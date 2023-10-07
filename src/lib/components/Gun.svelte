@@ -2,10 +2,11 @@
   import gun from '$lib/images/gun_lg.png';
 
   export let classes = '';
+  export let width = 130;
 </script>
 
 <div class={classes}>
-  <img src={gun} width="130" alt="" class="dark:invert transition" />
+  <img src={gun} alt="" {width} class="dark:invert transition" />
 </div>
 
 <style>
