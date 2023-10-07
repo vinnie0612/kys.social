@@ -18,24 +18,35 @@
 
 <button on:click={handleAuth}>
   {#if $currentUser}
-    <div
-      role="tooltip"
-      transition:slide={{ duration: 300, easing: quintOut, axis: 'y' }}
-      on:mouseover={() => {
-        showTooltip = true;
-      }}
-      on:focus={() => {
-        showTooltip = true;
-      }}
-      on:mouseleave={() => {
-        showTooltip = false;
-      }}
-    >
+    <div class="relative">
+      <div
+        role="tooltip"
+        class="absolute bottom-full left-1/2 transform -translate-x-1/2"
+        transition:slide={{ duration: 300, easing: quintOut, axis: 'y' }}
+        on:mouseover={() => {
+          showTooltip = true;
+        }}
+        on:focus={() => {
+          showTooltip = true;
+        }}
+        on:mouseleave={() => {
+          showTooltip = false;
+        }}
+      >
+        <div class="bg-gray-800 text-white rounded-md p-2">
+          <span>Signed in as {$currentUser.username}</span>
+        </div>
+      </div>
       <Icon icon="pixelarticons:logout" />
     </div>
     {#if showTooltip}
-      <div class="absolute top-40 left-50" transition:fade={{ delay: 0, duration: 200 }}>
-        <span class="">signed in as {$currentUser.username}</span>
+      <div
+        class="absolute bottom-full left-1/2 transform -translate-x-1/2"
+        transition:slide={{ duration: 300, easing: quintOut, axis: 'y' }}
+      >
+        <div class="bg-gray-800 text-white rounded-md p-2">
+          <span>Signed in as {$currentUser.username}</span>
+        </div>
       </div>
     {/if}
   {:else}
@@ -44,3 +55,5 @@
     </div>
   {/if}
 </button>
+
+  
