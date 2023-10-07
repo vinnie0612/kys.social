@@ -4,7 +4,7 @@
   import { slide } from 'svelte/transition';
   import { quintOut } from 'svelte/easing';
 
-  export let isMenuOpen = true;
+  export let isMenuOpen = false;
 </script>
 
 <nav class="bg-stone-700 dark:bg-slate-600 flex justify-between items-center w-screen px-2 text-lg">
@@ -14,7 +14,7 @@
     {#if isMenuOpen}
       <div transition:slide={{ duration: 300, easing: quintOut, axis: 'y' }}>
         <div class="items-center flex-row flex">
-          <div class="flex items-center">
+          <!-- <div class="flex items-center">
             <span>
               <input
                 type="text"
@@ -26,7 +26,7 @@
             <button class="ml-2">
               <Icon class="text-2xl" icon="pixelarticons:search" />
             </button>
-          </div>
+          </div> -->
           <a href="/" class="ml-2">
             <Icon class="text-3xl" icon="pixelarticons:briefcase-account" />
           </a>

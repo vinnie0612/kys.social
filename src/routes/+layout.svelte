@@ -18,7 +18,7 @@
 <main class:dark={isDarkMode}>
   <div
     id="app"
-    class="dark:bg-stone-900 dark:text-slate-400 transition bg-slate-400 text-stone-900 hidden h-screen w-screen"
+    class="dark:bg-stone-900 dark:text-slate-400 transition bg-slate-400 text-stone-900 hidden min-h-screen h-screen w-screen"
   >
     <slot />
   </div>
